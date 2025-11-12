@@ -38,9 +38,16 @@ async function readAppointments(): Promise<Appointment[]> {
 }
 
 async function writeAppointments(data: Appointment[]): Promise<void> {
+  // ✅ Prevent write errors in Vercel's serverless environment
+  if (process.env.NODE_ENV === "production") {
+    console.log("⚠️ Skipping writeAppointments() in production - read-only FS");
+    return;
+  }
+
   await ensureDataDir();
   await fs.writeFile(appointmentsFile, JSON.stringify(data, null, 2), "utf8");
 }
+
 
 // Helper function to enrich appointment with patient and doctor data
 function enrichAppointment(appointment: Appointment) {

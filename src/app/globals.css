@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --primary: #0066FF;
+  --primary-foreground: #ffffff;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #171717;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #F3F4F6;
+  --accent-foreground: #171717;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #0066FF;
+  --success: #10B981;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior: var(--scroll-behavior, auto);
+}
+
+.fc-event {
+  color: #fff !important;
+}
+.fc-daygrid-event {
+  color: #fff !important;
+}
+.fc-event-title {
+  color: #fff !important;
+}
+
+.fc-tooltip {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1;
+}
+
+
+.fc-tooltip.fc-tooltip--fadeout {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fc-daygrid-event-harness {
+  margin-bottom: 4px !important;
+}
+
+/* Optionally add rounded corners and padding for modern UI */
+.fc-daygrid-event {
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+  line-height: 1.2;
+}
+.fc {
+  font-family: SF Pro Rounded, Inter, sans-serif;
+  --fc-border-color: #e5e7eb;
+}
+
+.fc-daygrid-day-number {
+  color: #111827;
+  font-weight: 600;
+}
+
+.fc-day-today {
+  background: #f0f9ff !important;
+  border-radius: 10px;
+}
+
+.fc-daygrid-event {
+  border-radius: 6px !important;
+  padding: 2px 4px !important;
+  margin-bottom: 4px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+
+.fc-daygrid-event-dot {
+  display: none !important;
+}
+.fc-event {
+  height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+}
+
+/* FullCalendar Buttons */
+.fc .fc-button-primary {
+  background-color: #06b6d4 !important; /* Cyan */
+  border-color: #06b6d4 !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Hover */
+.fc .fc-button-primary:hover {
+  background-color: #0891b2 !important; /* Teal shade */
+  border-color: #0891b2 !important;
+  
+}
+
+/* Active (selected view) */
+.fc .fc-button-primary.fc-button-active {
+  border-radius: 10px;
+  background-color: #0e7490 !important;
+  border-color: #0e7490 !important;
+}
+
+/* Today button special styling */
+.fc .fc-today-button {
+  background-color: #14b8a6 !important; /* Emerald/Cyan */
+  border-color: #14b8a6 !important;
+}
+
+
+
+

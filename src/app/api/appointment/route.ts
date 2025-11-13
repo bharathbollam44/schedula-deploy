@@ -17,7 +17,7 @@ import { promises as fs } from "fs";
 import path from "path";
 
 // File-based persistence helpers
-const dataDir = path.join(process.cwd(), "data");
+const dataDir = process.env.DATA_DIR || path.join(process.cwd(), "data");
 const appointmentsFile = path.join(dataDir, "appointments.json");
 
 async function ensureDataDir() {
